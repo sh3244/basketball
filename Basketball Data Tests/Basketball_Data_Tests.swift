@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Argo
 
 class Basketball_Data_Tests: XCTestCase {
 
@@ -21,32 +20,36 @@ class Basketball_Data_Tests: XCTestCase {
     super.tearDown()
   }
 
-  func testModels() {
-    guard let path = Bundle.main.path(forResource: "basketballdata", ofType: "json") else {
-      return
-    }
-    let file = FileManager()
-    let _ = file.contents(atPath: path)
+//  func testModels() {
+//    guard let path = Bundle.main.path(forResource: "basketballdata", ofType: "json") else {
+//      return
+//    }
+//    let file = FileManager()
+//    let _ = file.contents(atPath: path)
+//
+//    guard let data = NSData(contentsOfFile: path) else {
+//      return
+//    }
+//    do {
+//      if let results = try JSONSerialization.jsonObject(with: data as Data, options: []) as? NSDictionary {
+//
+//        let gameStates: [GameState] = decode(results["Game State"]!)!
+//        let players: [Player] = decode(results["Players"]!)!
+//        let playerStats: [PlayerStat] = decode(results["Player Stats"]!)!
+//        let teams: [Team] = decode(results["Teams"]!)!
+//        let games: [Game] = decode(results["Games"]!)!
+//
+//        print(gameStates, players, playerStats, teams, games)
+//      }
+//
+//    } catch {
+//      
+//    }
+//    
+//  }
 
-    guard let data = NSData(contentsOfFile: path) else {
-      return
-    }
-    do {
-      if let results = try JSONSerialization.jsonObject(with: data as Data, options: []) as? NSDictionary {
-
-        let gameStates: [GameState] = decode(results["Game State"]!)!
-        let players: [Player] = decode(results["Players"]!)!
-        let playerStats: [PlayerStat] = decode(results["Player Stats"]!)!
-        let teams: [Team] = decode(results["Teams"]!)!
-        let games: [Game] = decode(results["Games"]!)!
-
-        print(gameStates, players, playerStats, teams, games)
-      }
-
-    } catch {
-      
-    }
-    
+  func testDataManager() {
+    let manager = DataManager.shared
   }
   
 }

@@ -1,127 +1,24 @@
 PODS:
-  - Alpha (0.3.2):
-    - Alpha/Application (= 0.3.2)
-    - Alpha/Asset (= 0.3.2)
-    - Alpha/Bonjour (= 0.3.2)
-    - Alpha/Bootstrap (= 0.3.2)
-    - Alpha/Console (= 0.3.2)
-    - Alpha/Core (= 0.3.2)
-    - Alpha/Event (= 0.3.2)
-    - Alpha/File (= 0.3.2)
-    - Alpha/Global (= 0.3.2)
-    - Alpha/Heap (= 0.3.2)
-    - Alpha/Integration (= 0.3.2)
-    - Alpha/Interface (= 0.3.2)
-    - Alpha/Keychain (= 0.3.2)
-    - Alpha/Model (= 0.3.2)
-    - Alpha/Network (= 0.3.2)
-    - Alpha/Notification (= 0.3.2)
-    - Alpha/Object (= 0.3.2)
-    - Alpha/Palettes (= 0.3.2)
-    - Alpha/Permission (= 0.3.2)
-    - Alpha/Private (= 0.3.2)
-    - Alpha/Remote (= 0.3.2)
-    - Alpha/Render (= 0.3.2)
-    - Alpha/Screenshot (= 0.3.2)
-    - Alpha/Server (= 0.3.2)
-    - Alpha/State (= 0.3.2)
-    - Alpha/Theme (= 0.3.2)
-    - Alpha/Touch (= 0.3.2)
-    - Alpha/Trigger (= 0.3.2)
-    - Alpha/Utility (= 0.3.2)
-    - Alpha/View (= 0.3.2)
-    - Alpha/ViewHierarchy (= 0.3.2)
-  - Alpha/Application (0.3.2):
-    - Alpha/Core
-  - Alpha/Asset (0.3.2)
-  - Alpha/Bonjour (0.3.2)
-  - Alpha/Bootstrap (0.3.2):
-    - Alpha/Core
-  - Alpha/Console (0.3.2):
-    - Alpha/Core
-  - Alpha/Core (0.3.2):
-    - Alpha/Asset
-    - Alpha/Model
-    - Alpha/Private
-    - Alpha/Theme
-  - Alpha/Event (0.3.2):
-    - Alpha/Core
-  - Alpha/File (0.3.2):
-    - Alpha/Core
-  - Alpha/Global (0.3.2):
-    - Alpha/Core
-    - Alpha/Object
-  - Alpha/Heap (0.3.2):
-    - Alpha/Core
-    - Alpha/Global
-    - Alpha/Object
-  - Alpha/Integration (0.3.2):
-    - Alpha/Core
-  - Alpha/Interface (0.3.2):
-    - Alpha/Core
-    - Alpha/Render
-  - Alpha/Keychain (0.3.2):
-    - Alpha/Core
-  - Alpha/Model (0.3.2):
-    - Alpha/Theme
-    - Alpha/Utility
-  - Alpha/Network (0.3.2):
-    - Alpha/Core
-  - Alpha/Notification (0.3.2):
-    - Alpha/Core
-  - Alpha/Object (0.3.2):
-    - Alpha/Core
-    - Alpha/Render
-  - Alpha/Palettes (0.3.2):
-    - Alpha/Theme
-  - Alpha/Permission (0.3.2):
-    - Alpha/Core
-  - Alpha/Private (0.3.2)
-  - Alpha/Remote (0.3.2):
-    - Alpha/Bonjour
-    - Alpha/Core
-  - Alpha/Render (0.3.2):
-    - Alpha/Core
-    - Alpha/View
-  - Alpha/Screenshot (0.3.2):
-    - Alpha/Core
-  - Alpha/Server (0.3.2):
-    - Alpha/Bonjour
-    - Alpha/Core
-  - Alpha/State (0.3.2):
-    - Alpha/Core
-  - Alpha/Theme (0.3.2):
-    - Alpha/Asset
-    - Alpha/Utility
-  - Alpha/Touch (0.3.2):
-    - Alpha/Core
-  - Alpha/Trigger (0.3.2):
-    - Alpha/Core
-  - Alpha/Utility (0.3.2)
-  - Alpha/View (0.3.2):
-    - Alpha/Core
-  - Alpha/ViewHierarchy (0.3.2):
-    - Alpha/Integration
-    - Alpha/Render
   - Argo (4.1.2):
     - Runes (>= 4.0.0)
   - Curry (3.0.0)
+  - FLEX (2.4.0)
   - Runes (4.0.1)
   - SteviaLayout (3.1.3)
 
 DEPENDENCIES:
-  - Alpha (= 0.3.2)
   - Argo (~> 4.1.2)
   - Curry (~> 3.0.0)
+  - FLEX (~> 2.0)
   - SteviaLayout (~> 3.1.2)
 
 SPEC CHECKSUMS:
-  Alpha: ffe13f7d9c5f287b93398a01b67e9d44729c6630
   Argo: 5db06502fc1222d83011f574243089dab25202ff
   Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
   SteviaLayout: 807c742a8e4bcb94f47f018b23873a40f1f1cc1d
 
-PODFILE CHECKSUM: 6add2122d03589f360087ec9dd4b7aa6ec4b98f7
+PODFILE CHECKSUM: cb491f3219337fccb25b6fcebb877f221189d0db
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

@@ -9,16 +9,35 @@
 import UIKit
 
 class GameCell: UITableViewCell {
+  var homeTeamName: UILabel!
+  var homeTeamScore: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  var awayTeamName: UILabel!
+  var awayTeamScore: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  var broadcaster: UILabel!
 
-        // Configure the view for the selected state
-    }
+  var time: UILabel!
+  var final: UILabel!
+
+  override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    homeTeamName = UILabel()
+    homeTeamScore = UILabel()
+
+    awayTeamName = UILabel()
+    awayTeamScore = UILabel()
+
+    broadcaster = UILabel()
+
+    time = UILabel()
+    final = UILabel()
+    contentView.backgroundColor = .lightGray
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+
 
 }

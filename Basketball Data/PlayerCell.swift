@@ -9,16 +9,24 @@
 import UIKit
 
 class PlayerCell: UITableViewCell {
+  var name: UILabel!
+  var team: UILabel!
+  var stats: UILabel!
+  var nerd: UILabel!
+  var nerdLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    name = UILabel()
+    team = UILabel()
+    stats = UILabel()
+    nerd = UILabel()
+    nerdLabel = UILabel()
+    contentView.backgroundColor = .lightGray
+  }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
 
 }

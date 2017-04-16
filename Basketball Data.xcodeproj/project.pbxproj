@@ -17,6 +17,7 @@
 		2246868E1EA2DC19009C343D /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246868D1EA2DC19009C343D /* PlayerCell.swift */; };
 		224686901EA2DCCB009C343D /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246868F1EA2DCCB009C343D /* GameCell.swift */; };
 		66919F2085648F24B4AFC183 /* Pods_Basketball_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E05D640471D00E48AA38BB /* Pods_Basketball_Data.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A243C86C1EA32D5800C25C8F /* Basketball_Data_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224686971EA2DD0E009C343D /* Basketball_Data_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,7 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CD7944F878DFF461683B4DE7 /* [CP] Embed Pods Frameworks */ = {
@@ -300,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A243C86C1EA32D5800C25C8F /* Basketball_Data_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +450,7 @@
 		};
 		2246869D1EA2DD0E009C343D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B3A01B0BD5663BE58416203 /* Pods-Basketball Data.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 82QRSDA4CN;
