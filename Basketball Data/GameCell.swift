@@ -29,9 +29,10 @@ class GameCell: UITableViewCell {
   }
 
   override func layoutSubviews() {
+    equalWidths([awayTeam, gameStatus, homeTeam])
     contentView.layout(
       0,
-      |awayTeam, gameStatus, homeTeam| ~ 60,
+      |awayTeam-gameStatus-homeTeam| ~ 60,
       0
     )
   }

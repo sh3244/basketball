@@ -103,20 +103,64 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     response = DataManager.shared.fetchCatalogResponse()
   }
 
+  // All the cell loading is done here
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     let index = indexPath.row
 
-    let game = response.Games[index]
-
     if let gameCell = cell as? GameCell {
-      gameCell.homeTeam.name.text = DataManager.shared.getTeamNameFrom(response: response, id: game.home_team_id)
+      let game = response.Games[index]
+
+      guard let homeTeam = DataManager.shared.getTeamForTeam(response: response, id: game.home_team_id),
+        let awayTeam = DataManager.shared.getTeamForTeam(response: response, id: game.away_team_id) else {
+          return
+      }
+
+      gameCell.homeTeam.name.text = homeTeam.name
+      gameCell.awayTeam.name.text = awayTeam.name
+
+      guard let state = DataManager.shared.getStateForGame(response: response, id: game.id) else {
+        return
+      }
+      gameCell.homeTeam.score.text = state.home_team_score.description
+      gameCell.awayTeam.score.text = state.away_team_score.description
+
+      if state.game_status != "FINAL" {
+        gameCell.gameStatus.isFinal = false
+        gameCell.gameStatus.broadcaster.text = state.broadcast
+        gameCell.gameStatus.time.text = DataManager.shared.periodStringFor(value: state.quarter) + " " + state.time_left_in_quarter
+      }
+    }
+
+    if let playerCell = cell as? PlayerCell {
+      let player = response.Players[index]
+
+      guard let stats = DataManager.shared.getStatsForPlayer(response: response, id: player.id) else {
+        return
+      }
+      playerCell.name.text = player.name
+      playerCell.nerd.text = stats.nerd.description
+
+      var statsString = stats.points.description + " Pts, " + stats.assists.description
+      statsString += " Ast, " + stats.rebounds.description + " Reb"
+      playerCell.stats.text = statsString
     }
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell")
+    switch viewType {
+    case .GameTable:
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell") else {
+        break
+      }
+      return cell
+    case .PlayerTable:
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell") else {
+        break
+      }
+      return cell
+    }
 
-    return cell ?? GameCell()
+    return UITableViewCell()
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -31,6 +31,7 @@ class TeamScoreView: UIView {
   }
 
   override func layoutSubviews() {
+    super.layoutSubviews()
     layout(
       0,
       |name| ~ 30,

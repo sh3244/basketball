@@ -49,7 +49,7 @@ struct PlayerStat {
   var assists: Int
   var game_id: Int
   var id: Int
-  var nerd: Int
+  var nerd: Float
   var player_id: Int
   var points: Int
   var rebounds: Int

@@ -15,16 +15,17 @@ class GameStatusView: UIView {
   var time: UILabel!
   var final: UILabel!
 
+  var isFinal: Bool = true
+
   override init(frame: CGRect) {
     time = UILabel()
     time.textAlignment = .center
     final = UILabel()
     final.textAlignment = .center
+    final.text = "FINAL"
     broadcaster = UILabel()
     broadcaster.textAlignment = .center
     super.init(frame: frame)
-
-    sv([time, final, broadcaster])
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -36,12 +37,31 @@ class GameStatusView: UIView {
   }
 
   override func layoutSubviews() {
-    layout(
-      0,
-      |time| ~ 30,
-      |broadcaster| ~ 30,
-      0
-    )
+    removeConstraints(constraints)
+    if isFinal {
+      sv(final)
+      layout(
+        0,
+        |final| ~ 60,
+        0
+      )
+      backgroundColor = .green
+    }
+    else {
+      sv([time, broadcaster])
+      layout(
+        0,
+        |time| ~ 30,
+        |broadcaster| ~ 30,
+        0
+      )
+      backgroundColor = .red
+    }
   }
 
+  func prepareForReuse() {
+    time.removeFromSuperview()
+    final.removeFromSuperview()
+    broadcaster.removeFromSuperview()
+  }
 }

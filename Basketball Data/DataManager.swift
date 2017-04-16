@@ -45,13 +45,48 @@ class DataManager: NSObject {
     return empty
   }
 
-  func getTeamNameFrom(response: BallResponse, id: Int) -> String {
+  func getTeamForTeam(response: BallResponse, id: Int) -> Team? {
     let teams = response.Teams
     for team in teams {
       if team.id == id {
-        return team.name
+        return team
       }
     }
-    return ""
+    return nil
+  }
+
+  func getStateForGame(response: BallResponse, id: Int) -> GameState? {
+    let gameStates = response.GameStates
+    for state in gameStates {
+      if state.game_id == id {
+        return state
+      }
+    }
+    return nil
+  }
+
+  func getStatsForPlayer(response: BallResponse, id: Int) -> PlayerStat? {
+    let stats = response.PlayerStats
+    for stat in stats {
+      if stat.player_id == id {
+        return stat
+      }
+    }
+    return nil
+  }
+
+  func periodStringFor(value: Int) -> String {
+    switch value {
+    case 1:
+      return "Q1"
+    case 2:
+      return "Q2"
+    case 3:
+      return "Q3"
+    case 4:
+      return "Q4"
+    default:
+      return ""
+    }
   }
 }
