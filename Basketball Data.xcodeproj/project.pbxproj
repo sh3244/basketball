@@ -18,6 +18,8 @@
 		224686901EA2DCCB009C343D /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246868F1EA2DCCB009C343D /* GameCell.swift */; };
 		66919F2085648F24B4AFC183 /* Pods_Basketball_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E05D640471D00E48AA38BB /* Pods_Basketball_Data.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A243C86C1EA32D5800C25C8F /* Basketball_Data_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224686971EA2DD0E009C343D /* Basketball_Data_Tests.swift */; };
+		A243C86E1EA332CB00C25C8F /* TeamScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243C86D1EA332CB00C25C8F /* TeamScoreView.swift */; };
+		A243C8701EA336A000C25C8F /* GameStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243C86F1EA336A000C25C8F /* GameStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		224686971EA2DD0E009C343D /* Basketball_Data_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basketball_Data_Tests.swift; sourceTree = "<group>"; };
 		224686991EA2DD0E009C343D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3A01B0BD5663BE58416203 /* Pods-Basketball Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball Data.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball Data/Pods-Basketball Data.debug.xcconfig"; sourceTree = "<group>"; };
+		A243C86D1EA332CB00C25C8F /* TeamScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScoreView.swift; sourceTree = "<group>"; };
+		A243C86F1EA336A000C25C8F /* GameStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatusView.swift; sourceTree = "<group>"; };
 		D5E05D640471D00E48AA38BB /* Pods_Basketball_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Basketball_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED47C745B0FF61395A7CD0A5 /* Pods-Basketball Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball Data.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball Data/Pods-Basketball Data.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 				2246868B1EA2D5DC009C343D /* Model.swift */,
 				2246868D1EA2DC19009C343D /* PlayerCell.swift */,
 				2246868F1EA2DCCB009C343D /* GameCell.swift */,
+				A243C86D1EA332CB00C25C8F /* TeamScoreView.swift */,
+				A243C86F1EA336A000C25C8F /* GameStatusView.swift */,
 			);
 			path = "Basketball Data";
 			sourceTree = "<group>";
@@ -289,6 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				224686781EA2D123009C343D /* ViewController.swift in Sources */,
+				A243C86E1EA332CB00C25C8F /* TeamScoreView.swift in Sources */,
+				A243C8701EA336A000C25C8F /* GameStatusView.swift in Sources */,
 				2246868A1EA2D546009C343D /* DataManager.swift in Sources */,
 				224686761EA2D123009C343D /* AppDelegate.swift in Sources */,
 				2246868C1EA2D5DC009C343D /* Model.swift in Sources */,

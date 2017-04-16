@@ -10,7 +10,6 @@ import UIKit
 import Argo
 
 class DataManager: NSObject {
-  var response: BallResponse = BallResponse(GameStates: [], Players: [], PlayerStats: [], Teams: [], Games: [])
 
   static let shared: DataManager = {
     let instance = DataManager()
@@ -46,16 +45,13 @@ class DataManager: NSObject {
     return empty
   }
 
-  func updateCatalogResponse() {
-    response = fetchCatalogResponse()
-  }
-
-  func teamNameFrom(id: String) -> String {
+  func getTeamNameFrom(response: BallResponse, id: Int) -> String {
     let teams = response.Teams
     for team in teams {
       if team.id == id {
-        return team.full_name
+        return team.name
       }
     }
+    return ""
   }
 }

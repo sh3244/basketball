@@ -7,31 +7,20 @@
 //
 
 import UIKit
+import Stevia
 
 class GameCell: UITableViewCell {
-  var homeTeamName: UILabel!
-  var homeTeamScore: UILabel!
-
-  var awayTeamName: UILabel!
-  var awayTeamScore: UILabel!
-
-  var broadcaster: UILabel!
-
-  var time: UILabel!
-  var final: UILabel!
+  var homeTeam: TeamScoreView!
+  var awayTeam: TeamScoreView!
+  var gameStatus: GameStatusView!
 
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    homeTeamName = UILabel()
-    homeTeamScore = UILabel()
+    homeTeam = TeamScoreView()
+    awayTeam = TeamScoreView()
+    gameStatus = GameStatusView()
 
-    awayTeamName = UILabel()
-    awayTeamScore = UILabel()
-
-    broadcaster = UILabel()
-
-    time = UILabel()
-    final = UILabel()
+    contentView.sv([homeTeam, awayTeam, gameStatus])
     contentView.backgroundColor = .lightGray
   }
 
@@ -39,5 +28,12 @@ class GameCell: UITableViewCell {
     super.init(coder: aDecoder)
   }
 
+  override func layoutSubviews() {
+    contentView.layout(
+      0,
+      |awayTeam, gameStatus, homeTeam| ~ 60,
+      0
+    )
+  }
 
 }

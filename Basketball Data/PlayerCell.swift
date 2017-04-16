@@ -29,4 +29,8 @@ class PlayerCell: UITableViewCell {
     super.init(coder: aDecoder)
   }
 
+  override func layoutSubviews() {
+    
+  }
+
 }

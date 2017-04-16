@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   var playerTableView: UITableView!
   var segmentControl: UISegmentedControl!
 
-  var response: BallResponse!
+  var response: BallResponse = BallResponse(GameStates: [], Players: [], PlayerStats: [], Teams: [], Games: [])
 
   enum ViewType {
     case GameTable
@@ -50,6 +50,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       playerTableView,
       segmentControl
       ])
+
+    update()
   }
 
   func segmentChangedFor(control: UISegmentedControl) {
@@ -66,6 +68,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
 
   func update() {
+    response = DataManager.shared.fetchCatalogResponse()
     var tableView = gameTableView
     if self.viewType == .GameTable {
       tableView = gameTableView
@@ -102,18 +105,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     let index = indexPath.row
+
     let game = response.Games[index]
-    let gameState = response.GameStates[index]
 
     if let gameCell = cell as? GameCell {
-      gameCell.homeTeamName =
+      gameCell.homeTeam.name.text = DataManager.shared.getTeamNameFrom(response: response, id: game.home_team_id)
     }
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell")
 
-    return cell
+    return cell ?? GameCell()
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 60
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -127,5 +134,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     else if self.viewType == .PlayerTable {
       return response.Players.count
     }
+    return 0
   }
 }
