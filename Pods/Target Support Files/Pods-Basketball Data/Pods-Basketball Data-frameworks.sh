@@ -89,18 +89,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Alpha/Alpha.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Argo/Argo.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Curry/Curry.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Runes/Runes.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SteviaLayout/Stevia.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Alpha/Alpha.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Argo/Argo.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Curry/Curry.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Runes/Runes.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SteviaLayout/Stevia.framework"
 fi

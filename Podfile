@@ -7,9 +7,7 @@ target 'Basketball Data' do
   pod 'SteviaLayout', '~> 3.1.2'
   pod 'Argo', '~> 4.1.2'
   pod 'Curry', '~> 3.0.0'
-
-  pod 'Quick', '~> 1.1.0'
-  pod 'Nimble', '~> 6.1.0'
+  pod 'Alpha', '0.3.2'
 
   # Pods for Basketball Data
 

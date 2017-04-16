@@ -16,7 +16,6 @@
 		2246868C1EA2D5DC009C343D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246868B1EA2D5DC009C343D /* Model.swift */; };
 		2246868E1EA2DC19009C343D /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246868D1EA2DC19009C343D /* PlayerCell.swift */; };
 		224686901EA2DCCB009C343D /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246868F1EA2DCCB009C343D /* GameCell.swift */; };
-		224686981EA2DD0E009C343D /* Basketball_Data_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224686971EA2DD0E009C343D /* Basketball_Data_Tests.swift */; };
 		66919F2085648F24B4AFC183 /* Pods_Basketball_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E05D640471D00E48AA38BB /* Pods_Basketball_Data.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -301,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224686981EA2DD0E009C343D /* Basketball_Data_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

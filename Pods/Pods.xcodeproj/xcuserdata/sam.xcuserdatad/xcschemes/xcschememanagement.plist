@@ -4,54 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alpha.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Argo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Curry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Nimble.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-Basketball Data.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Quick.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Runes.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>SteviaLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -66,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4412D126AF3BD0B41334D67EC9B2F67C</key>
+		<key>44D3ECEDDA0B8D35B839060F815AB3E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45C7236C8694B0742FF0F2E58EE6D57D</key>
+		<key>554F684589C3BD06DB7FEB06743AB1F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -81,12 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EAD26FEFD7C04C3E2C7218C2145C13E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A552B85604CD252B5271C9901FC5EAAF</key>
+		<key>8CA1290F0B14B3F9A42F0AC151F53B56</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -19,10 +19,30 @@ struct Team {
   var name: String
 }
 
+extension Team: Decodable {
+  static func decode(_ json: JSON) -> Decoded<Team> {
+    return curry(Team.init)
+      <^> json <| "abbrev"
+      <*> json <| "city"
+      <*> json <| "full_name"
+      <*> json <| "id"
+      <*> json <| "name"
+  }
+}
+
 struct Player {
   var id: Int
   var name: String
   var team_id: Int
+}
+
+extension Player: Decodable {
+  static func decode(_ json: JSON) -> Decoded<Player> {
+    return curry(Player.init)
+      <^> json <| "id"
+      <*> json <| "name"
+      <*> json <| "team_id"
+  }
 }
 
 struct PlayerStat {
@@ -36,19 +56,19 @@ struct PlayerStat {
   var team_id: Int
 }
 
-//extension GameState: Decodable {
-//  static func decode(_ json: JSON) -> Decoded<GameState> {
-//    return curry(GameState.init)
-//      <^> json <| "assists"
-//      <*> json <| "game_id"
-//      <*> json <| "id"
-//      <*> json <| "nerd"
-//      <*> json <| "player_id"
-//      <*> json <| "points"
-//      <*> json <| "rebounds"
-//      <*> json <| "team_id"
-//  }
-//}
+extension PlayerStat: Decodable {
+  static func decode(_ json: JSON) -> Decoded<PlayerStat> {
+    return curry(PlayerStat.init)
+      <^> json <| "assists"
+      <*> json <| "game_id"
+      <*> json <| "id"
+      <*> json <| "nerd"
+      <*> json <| "player_id"
+      <*> json <| "points"
+      <*> json <| "rebounds"
+      <*> json <| "team_id"
+  }
+}
 
 struct Game {
   var away_team_id: Int
@@ -75,7 +95,7 @@ struct GameState {
   var home_team_score: Int
   var id: Int
   var quarter: Int
-  var time_left_in_quarter: TimeInterval
+  var time_left_in_quarter: String
 }
 
 extension GameState: Decodable {
@@ -89,6 +109,25 @@ extension GameState: Decodable {
       <*> json <| "id"
       <*> json <| "quarter"
       <*> json <| "time_left_in_quarter"
+  }
+}
+
+struct BallResponse {
+  var GameStates: [GameState]
+  var Players: [Player]
+  var PlayerStats: [PlayerStat]
+  var Teams: [Team]
+  var Games: [Game]
+}
+
+extension BallResponse: Decodable {
+  static func decode(_ json: JSON) -> Decoded<BallResponse> {
+    return curry(BallResponse.init)
+      <^> json <|| "Game States"
+      <*> json <|| "Players"
+      <*> json <|| "Player Stats"
+      <*> json <|| "Teams"
+      <*> json <|| "Games"
   }
 }
 
